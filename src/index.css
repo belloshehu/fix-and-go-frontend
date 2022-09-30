@@ -1,3 +1,7 @@
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
 :root {
   --font-family: roboto;
   --small-screen-start: 320px;
@@ -24,22 +28,70 @@
 
   --small-screen-font-size-h1: 64px;
   --large-screen-font-size-h1: 80px;
-  --large-screen-bold-h1: 700;
+  --font-weight-h1: 700;
   
   --small-screen-font-size-h2: 48px;
   --large-screen-font-size-h2: 64px;
-  --large-screen-bold-h2: 700;
+  --font-weight-h2: 700;
 
   --small-screen-font-size-h3: 32px;
   --large-screen-font-size-h3: 48px;
-  --large-screen-bold-h3: 700;
+  --font-weight-h3: 700;
+
+  --small-screen-font-size-subtitle1: 16px;
+  --large-screen-font-size-subtitle1: 24px;
+  --small-screen-font-weight-subtitle1: 600;
+
+  --small-screen-font-size-subtitle2: 14px;
+  --large-screen-font-size-subtitle2: 22px;
+  --small-screen-font-weight-subtitle2: 600;
+
+  --small-screen-font-size-body1: 16px;
+  --large-screen-font-size-body1: 24px;
+  --small-screen-font-weight-body1: 400;
+
+  --small-screen-font-size-body2: 14px;
+  --large-screen-font-size-body2: 22px;
+  --small-screen-font-weight-body2: 400;
+
+  --small-screen-font-size-small-btn: 13px;
+  --large-screen-font-size-small-btn: 22px;
+  --font-weight-small-btn: 700;
+
+  --small-screen-font-size-medium-btn: 14px;
+  --large-screen-font-size-medium-btn: 24px;
+  --font-weight-medium-btn: 700;
+
+  --small-screen-font-size-large-btn: 15px;
+  --large-screen-font-size-large-btn: 26px;
+  --font-weight-large-btn: 700;
+
+  --small-screen-font-size-caption: 12px;
+  --large-screen-font-size-caption: 18px;
+  --font-weight-caption: 700;
+
+  --large-horizontal-padding: 40px;
+  --large-vertical-padding: 40px;
+
+  --small-horizontal-padding: 20px;
+  --small-vertical-padding: 10px;
+
+  
+  --large-horizontal-margin: 40px;
+  --large-vertical-margin: 40px;
+
+  --small-horizontal-margin: 20px;
+  --small-vertical-margin: 20px;
+
+
+
+
 }
 
 body {
+  padding: 0 7%;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: var(--font-family) 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -47,4 +99,70 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* buttons */
+.btn {
+  padding: var(--small-vertical-padding) var(--small-horizontal-padding);
+}
+.text-white{
+  color: var(--color-white);
+}
+.text-dark{
+  color: var(--color-black1);
+}
+.text-primary{
+  color: var(--color-primary);
+}
+.text-white{
+  color: var(--color-white);
+}
+.bg-primary {
+  background-color: var(--color-primary);
+}
+.bg-secondary {
+  background-color: var(--color-secondary);
+}
+/* Header large-screen rule */
+
+@media screen and (min-width: 769px) {
+  .main-header div{
+    display: flex;
+    align-items: center;
+  }
+  header.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .main-header ul {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .main-header ul li{
+    padding: 0%;
+    margin: 0 var(--small-horizontal-margin);
+    list-style-type: none;
+  }
+ 
+  .nav-link{
+    text-decoration: none;
+    color: var(--color-black1);
+  }
+  .nav-link:link{
+    font-weight: lighter;
+    color: var(--color-black1);
+  }
+  .nav-link:active {
+    color: var(--color-primary);
+    font-weight: var(--font-weight-medium-btn);
+  }
+  .auth-wrapper a {
+    text-decoration: none;
+    display: inline-block;
+    width: 129.73px;
+    margin-left: 5px;
+  }
+
 }
