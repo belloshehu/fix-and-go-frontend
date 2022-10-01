@@ -14,7 +14,7 @@
   /*Colors*/
   --color-white: #ffffff;
   --color-primary: #22496d;
-  --color-secondary: #8ab4bd;
+  --color-secondary: #8AB4DB;
   --color-dark-blue: #1b3a57;
   --color-black1: #000000;
   --color-black2: #1d1d1d;
@@ -91,7 +91,7 @@ body {
     overflow-x: hidden;
     padding: 0;
     margin: 0;
-    font-family: var(--font-family) 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: Roboto, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -126,6 +126,9 @@ code {
 /* Header large-screen rule */
 
 @media screen and (min-width: 769px) {
+  h2{
+    font-size: 48px;
+  }
   .main-header div{
     display: flex;
     align-items: center;
@@ -250,5 +253,16 @@ code {
     right: 0%;
     top: 100%;
     z-index: -3;
+  }
+
+  /* Truested by section*/
+  .trusted-by-wrapper {
+    padding: var(--small-vertical-padding);
+  }
+
+  .trusted-by-items{
+    display: flex;
+    justify-content: center;
+    column-gap: var(--large-horizontal-margin);
   }
 }
