@@ -82,18 +82,18 @@
 
   --small-horizontal-margin: 20px;
   --small-vertical-margin: 20px;
+  --height-img-hero: 1039px;
 
-
-
-
+  --large-horizontal-padding-custom: 7%;
 }
 
 body {
-  padding: 0 7%;
-  margin: 0;
-  font-family: var(--font-family) 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    padding: 0;
+    margin: 0;
+    font-family: var(--font-family) 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 code {
@@ -129,7 +129,9 @@ code {
   .main-header div{
     display: flex;
     align-items: center;
+    padding: 0% var(--large-horizontal-padding-custom);
   }
+
   header.main-header {
     display: flex;
     justify-content: space-between;
@@ -165,4 +167,88 @@ code {
     margin-left: 5px;
   }
 
+  /* hero section */
+  
+  .hero-section{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: var(--large-vertical-padding);
+    position: relative;
+    height: fit-content;
+  }
+  .hero-photos-items{
+    position: relative;
+  }
+  .hero-photo-item:nth-of-type(2){
+    z-index: 2;
+  }
+  .hero-photo-item {
+    position: absolute;
+    right: 0%;
+    transition: all 0.4s linear;
+  }
+  .hero-photo-item img {
+    width: 100%;
+    height: var(--height-img-hero);
+    height: 1000px;
+  }
+  .hero-text{
+    font-size: 24px;
+    text-align: left;
+    width: 50%;
+    align-self: center;
+    padding-top: 8%;
+    padding-left: var(--large-horizontal-padding-custom);
+  }
+  .hero-text h1{
+    /* line-height: 0.9rem; */
+    font-size: var(--large-screen-font-size-h2);
+  }
+  .hero-text h1{
+    color: var(--color-primary);
+  }
+  .indicator-wrapper{
+    position: absolute;
+    bottom: -300px;
+    left: calc(50% - 35px);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: 5px;
+    margin: 0% auto;
+    z-index: 3;
+    text-align: center;
+    
+  }
+  .indicator{
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    background-color: var(--color-gray3);
+    color: white;
+  }
+
+  .indicator.active{
+    background-color: var(--color-primary);
+  }
+
+  .active {
+    transform: translateX(0vw);
+  }
+  .next{
+    transform: translateX(100vw);
+  }
+  .blob-left-middle{
+    position: absolute;
+    left: 0%;
+    top: 65%;
+    z-index: -3;
+  }
+  .blob-right-bottom {
+    position: absolute;
+    right: 0%;
+    top: 100%;
+    z-index: -3;
+  }
 }
