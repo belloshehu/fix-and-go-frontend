@@ -1,19 +1,16 @@
 import React from 'react';
 import './App.css';
-import { Features } from './components/Features';
-import { Footer } from './components/Footer';
-import { Header } from './components/Header';
-import { Hero } from './components/Hero';
-import { Trust } from './components/Trust';
+import {Routes, Route} from 'react-router-dom'
+import Home from './components/Home'
+import Error from './components/Error';
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <Hero />
-      <Trust />
-      <Features />
-      <Footer />
+      <Routes>
+        <Route path='/' element={<Home />}/>
+        <Route path='*' element={<Error/>} />
+      </Routes>
     </div>
   );
 }

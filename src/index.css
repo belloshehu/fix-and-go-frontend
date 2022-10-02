@@ -248,6 +248,11 @@ input {
   column-gap: 20px;
   text-align: left;
 }
+/* Error */
+.error{
+  padding-top: 5%;
+  color: var(--color-primary);
+}
 
 @media screen and (min-width: 769px) {
 
