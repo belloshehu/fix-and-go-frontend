@@ -1,5 +1,6 @@
 import React from 'react'
 import logo from '../images/logo.png'
+import {Link} from 'react-router-dom'
 
 export const Header = () => {
   return (
@@ -9,25 +10,25 @@ export const Header = () => {
                 <img src={logo} alt='logo'/>
                 <ul>
                     <li className="nav-item">
-                        <a href="/" className="nav-link">Home</a>
+                        <Link to='/' className="nav-link">Home</Link>
                     </li>
                     <li className="nav-item">
-                        <a href="/services" className="nav-link">Services</a>                
+                        <Link to="services" className="nav-link">Services</Link>                
                     </li>
                     <li className="nav-item">
-                        <a href="/support" className="nav-link">Support</a>
+                        <Link to="support" className="nav-link">Support</Link>
                     </li>
                     <li className="nav-item">
-                        <a href="/protection" className="nav-link">Protection</a>
+                        <Link to="protection" className="nav-link">Protection</Link>
                     </li>
                     <li className="nav-item">
-                        <a href="/aboutus" className="nav-link">About Us</a>
+                        <Link to="aboutus" className="nav-link">About Us</Link>
                     </li>
                 </ul>
            </div>
            <div className='auth-wrapper'>
-                <a className='btn bg-secondary text-white' href="/register">Register</a>
-                <a className='btn bg-primary text-white' href='/login'>Sign In</a>
+                <Link className='btn bg-secondary text-white' to="/register">Register</Link>
+                <Link className='btn bg-primary text-white' to='/login'>Sign In</Link>
            </div>
         </header>
     </>
